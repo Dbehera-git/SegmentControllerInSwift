@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="23504" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23506"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Segment ControlVC-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController storyboardIdentifier="SegmentControlVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="BYZ-38-t0r" customClass="SegmentControlVC" customModule="SegmentControlDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="j4w-hJ-pId">
+                                <rect key="frame" x="0.0" y="59" width="393" height="50"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Segment Control" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bsQ-a7-3U1">
+                                        <rect key="frame" x="0.0" y="0.0" width="393" height="50"/>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemPinkColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="bsQ-a7-3U1" secondAttribute="trailing" id="CHS-6K-XMu"/>
+                                    <constraint firstItem="bsQ-a7-3U1" firstAttribute="top" secondItem="j4w-hJ-pId" secondAttribute="top" id="Cmx-g4-HiP"/>
+                                    <constraint firstAttribute="bottom" secondItem="bsQ-a7-3U1" secondAttribute="bottom" id="ahS-xX-Yrr"/>
+                                    <constraint firstItem="bsQ-a7-3U1" firstAttribute="leading" secondItem="j4w-hJ-pId" secondAttribute="leading" id="bLC-kC-ZhO"/>
+                                    <constraint firstAttribute="height" constant="50" id="vJH-eK-NNE"/>
+                                </constraints>
+                            </view>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="1mx-wd-VPk">
+                                <rect key="frame" x="20" y="129" width="353" height="41"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="NBX-yl-vPX"/>
+                                </constraints>
+                                <segments>
+                                    <segment title="All"/>
+                                    <segment title="Electronics"/>
+                                </segments>
+                                <connections>
+                                    <action selector="didTapProductSegment:" destination="BYZ-38-t0r" eventType="valueChanged" id="7hj-WJ-MLP"/>
+                                </connections>
+                            </segmentedControl>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="2vS-YR-xtl">
+                                <rect key="frame" x="20" y="189" width="353" height="619"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" red="0.29803921568627451" green="0.30196078431372547" blue="0.38431372549019605" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="2vS-YR-xtl" firstAttribute="top" secondItem="1mx-wd-VPk" secondAttribute="bottom" constant="20" id="5W9-pf-QeS"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="j4w-hJ-pId" secondAttribute="trailing" id="7zO-R2-zNe"/>
+                            <constraint firstItem="j4w-hJ-pId" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="G6Z-OP-eVI"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="2vS-YR-xtl" secondAttribute="trailing" constant="20" id="XF3-d5-VwE"/>
+                            <constraint firstItem="1mx-wd-VPk" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="cPL-L2-q1h"/>
+                            <constraint firstItem="1mx-wd-VPk" firstAttribute="top" secondItem="j4w-hJ-pId" secondAttribute="bottom" constant="20" id="clk-vl-sZP"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="2vS-YR-xtl" secondAttribute="bottom" constant="10" id="iGk-ft-Pvg"/>
+                            <constraint firstItem="2vS-YR-xtl" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="mPd-GK-4f6"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="1mx-wd-VPk" secondAttribute="trailing" constant="20" id="nOn-UR-165"/>
+                            <constraint firstItem="j4w-hJ-pId" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="qzl-Mb-CSH"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="productSegment" destination="1mx-wd-VPk" id="0BR-wz-Oiw"/>
+                        <outlet property="productTV" destination="2vS-YR-xtl" id="Si7-W5-Tdo"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="132" y="-27"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemPinkColor">
+            <color red="1" green="0.17647058823529413" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
